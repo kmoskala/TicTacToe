@@ -1,0 +1,67 @@
+@import "_universal_variable";
+@import "_universal_style";
+
+#main_banner {
+  margin: auto;
+  position: relative;
+}
+.headers_container{
+  margin: auto;
+}
+.icon_container {
+  position: absolute;
+  bottom: em(5);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: em(50);
+  color: $main_color;
+  cursor: pointer;
+}
+.box_container {
+
+}
+.box {
+  max-height: 350px;
+  min-height: 350px;
+  margin: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .box_description {
+      height: 100%;
+      transition: height 5s;
+      .project_description {
+        display: block;
+        text-align: center;
+        font-size: em(11);
+        line-height: em(18);
+      }
+    }
+  }
+}
+.box_description {
+  position: absolute;
+  background: $white;
+  opacity: 0.8;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  color: $black;
+  font-weight: bold;
+  font-size: em(50);
+  transition: height 5s;
+
+  .project_description {
+    display: none;
+  }
+}
+#footer {
+  position: relative;
+  .icon_container {
+    top: em(5);
+  }
+}
