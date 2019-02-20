@@ -59,6 +59,48 @@
     display: none;
   }
 }
+.squer_container {
+  display: flex;
+  flex-flow: row wrap;
+}
+.user_container {
+  position: relative;
+  font-size: 75px;
+  text-align: center;
+  .user {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+    color: $grey;
+
+    &.active {
+      color: $pink;
+    }
+  }
+}
+.squer {
+  background-color: $lighter_pink;
+  color: $white;
+  border: 1px solid $pink;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: $light_pink;
+  }
+  &.active {
+    background-color: $light_pink;
+    font-size: 75px;
+
+    .sign {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}
 #footer {
   position: relative;
   .icon_container {
