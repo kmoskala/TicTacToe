@@ -7,9 +7,10 @@ function init() {
 	 
 	if(screen_width < 768) {
 		$('.squer').width(phone_screen_size).height(phone_screen_size);
+		console.log(phone_screen_size);
 	} else {
 		$('.squer').width(squer_size).height(squer_size);
-		
+		console.log(squer_size);
 	}
 	
 	$('#main_banner, #about_section').height(screen_height);
@@ -18,7 +19,7 @@ function init() {
 }
 $(window).resize(function () {
 	init();
-	console.log( $(window).width())
+	
 });
 $(document).ready(function () {
   init();
