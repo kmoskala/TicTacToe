@@ -149,6 +149,24 @@
     }
   }
 }
+
+#point_table {
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px;
+
+  .one_row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border-bottom: 1px solid $pink;
+    font-size: em(50);
+
+    div {
+      padding: 15px;
+    }
+  }
+}
 #footer {
   position: relative;
   .icon_container {

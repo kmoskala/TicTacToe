@@ -44,7 +44,10 @@ $(document).ready(function () {
     current: 1,
     moves: 0
   };
-  
+  var time =0,
+      interval = setInterval(function () {
+	  $('#time').text(time++);
+  }, 1000);
   $('.squer').click(function () {
   	    if (game.moves===9) {
   	    	alert("koniec gry!");
@@ -53,6 +56,7 @@ $(document).ready(function () {
 	        });
   	    	game.current = 1;
   	    	game.moves = 0;
+	       
         }
   	    if(game.moves === 0) {
 	        $(this).addClass("active").data('value', game.user1_sign).append(game.user1);
@@ -90,6 +94,8 @@ $(document).ready(function () {
 		game.current = 1;
 		game.moves = 0;
 		$("#popup").hide();
+		$('#time').text(time);
+		clearInterval(interval);
 		
 	});
  
