@@ -2,7 +2,7 @@ function init() {
 	var screen_height = $(window).height(),
 	    screen_width = $(window).width(),
 		headers_height = $('.headers_container').height(),
-		squer_size = ($('.squer_container').width() / 3) -3,
+		squer_size = (($('.squer_container').width()- 20) / 3) -12,
 	    phone_screen_size = (($(window).width()- 20) /3)-12;
 	 
 	if(screen_width < 768) {
