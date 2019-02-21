@@ -7,11 +7,11 @@ var gulp = require('gulp')
 
 sass.compiler = require('node-sass');
 // task minify html
-// gulp.task('html', function () {
-//   return gulp.src('*.html') // path to your files
-//     .pipe(minifyHtml())
-//     .pipe(gulp.dest(''));
-// });
+gulp.task('html', function () {
+  return gulp.src('*.html') // path to your files
+    .pipe(minifyHtml())
+    .pipe(gulp.dest(''));
+});
 
 
 // task uglify js
@@ -31,6 +31,6 @@ gulp.task('sass', function () {
 gulp.task('watch', function(){
   gulp.watch('./scss/*.scss', ['sass']);
   gulp.watch('./js/*.js', ['js']);
-  //gulp.watch('./*.html', ['html']);
+  gulp.watch('./*.html', ['html']);
   // Other watchers
 });
